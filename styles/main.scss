@@ -1,3 +1,45 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+.gradient-overlay{
+    background-image: linear-gradient(180deg, rgba(0,0,0,1) 33%, rgba(20,94,20,1) 66%, rgba(0,0,0,1) 67%, rgba(0,0,0,1) 100%);
+    background-size: 100% 300%;
+    background-position: bottom;
+    background-clip: text;
+    color: transparent;
+
+    animation: grad-animation 15s infinite;
+
+    &.delay {
+        &-0 {
+           animation-delay: 0; 
+        }
+        &-1 {
+            animation-delay: 2000ms;  
+        }
+        &-2 {
+            animation-delay: 4000ms;  
+        }
+        &-3 {
+            animation-delay: 6000ms;  
+        }
+        &-4 {
+            animation-delay: 8000ms;  
+        }
+        &-5 {
+            animation-delay: 10000ms;  
+        }
+        &-6 {
+            animation-delay: 12000ms; 
+        }
+        &-7 {
+            animation-delay: 14000ms; 
+        }
+    }
+}
+
+@keyframes grad-animation {
+    0% {background-position: bottom;}
+    100% {background-position: top;}
+}
